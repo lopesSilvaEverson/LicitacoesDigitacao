@@ -1,0 +1,225 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="ReorderColumns" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_FilePath" Type="InArgument(x:String)" />
+  </x:Members>
+  <sap:VirtualizedContainerService.HintSize>1143,830</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="32">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>UiPath.Core</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="32">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Everson" sap:VirtualizedContainerService.HintSize="242,446" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="dtBaseDados" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ReadRange AddHeaders="True" DataTable="[dtBaseDados]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Plan1" WorkbookPath="[in_FilePath]">
+      <ui:ReadRange.Range>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+      </ui:ReadRange.Range>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ReadRange>
+    <Sequence DisplayName="Adiciona Colunas" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_6">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:AddDataColumn x:TypeArguments="x:String" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="ANALISTADOC" DataTable="[dtBaseDados]" DisplayName="Add | ANALISTADOC" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_3" />
+      <ui:AddDataColumn x:TypeArguments="x:String" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="LICITACOESE" DataTable="[dtBaseDados]" DisplayName="Add | LICITACOESE" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_2" />
+    </Sequence>
+    <Sequence DisplayName="Mover Colunas" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_7">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <InvokeMethod DisplayName="RAZAOSOCIALORGAO" sap:VirtualizedContainerService.HintSize="238,134" sap2010:WorkflowViewState.IdRef="InvokeMethod_1" MethodName="SetOrdinal">
+        <InvokeMethod.TargetObject>
+          <InArgument x:TypeArguments="sd:DataColumn">[dtBaseDados.Columns("RAZAOSOCIALORGAO")]</InArgument>
+        </InvokeMethod.TargetObject>
+        <InArgument x:TypeArguments="x:Int32">0</InArgument>
+      </InvokeMethod>
+      <InvokeMethod DisplayName="NUMEROPROCESSO" sap:VirtualizedContainerService.HintSize="238,134" sap2010:WorkflowViewState.IdRef="InvokeMethod_2" MethodName="SetOrdinal">
+        <InvokeMethod.TargetObject>
+          <InArgument x:TypeArguments="sd:DataColumn">[dtBaseDados.Columns("NUMEROPROCESSO")]</InArgument>
+        </InvokeMethod.TargetObject>
+        <InArgument x:TypeArguments="x:Int32">1</InArgument>
+      </InvokeMethod>
+      <InvokeMethod DisplayName="SUSEP" sap:VirtualizedContainerService.HintSize="238,134" sap2010:WorkflowViewState.IdRef="InvokeMethod_3" MethodName="SetOrdinal">
+        <InvokeMethod.TargetObject>
+          <InArgument x:TypeArguments="sd:DataColumn">[dtBaseDados.Columns("SUSEP")]</InArgument>
+        </InvokeMethod.TargetObject>
+        <InArgument x:TypeArguments="x:Int32">2</InArgument>
+      </InvokeMethod>
+      <InvokeMethod DisplayName="CORRETORESCOLHIDO" sap:VirtualizedContainerService.HintSize="238,134" sap2010:WorkflowViewState.IdRef="InvokeMethod_4" MethodName="SetOrdinal">
+        <InvokeMethod.TargetObject>
+          <InArgument x:TypeArguments="sd:DataColumn">[dtBaseDados.Columns("CORRETORESCOLHIDO")]</InArgument>
+        </InvokeMethod.TargetObject>
+        <InArgument x:TypeArguments="x:Int32">3</InArgument>
+      </InvokeMethod>
+      <InvokeMethod DisplayName="LICITACOESE" sap:VirtualizedContainerService.HintSize="238,134" sap2010:WorkflowViewState.IdRef="InvokeMethod_5" MethodName="SetOrdinal">
+        <InvokeMethod.TargetObject>
+          <InArgument x:TypeArguments="sd:DataColumn">[dtBaseDados.Columns("LICITACOESE")]</InArgument>
+        </InvokeMethod.TargetObject>
+        <InArgument x:TypeArguments="x:Int32">4</InArgument>
+      </InvokeMethod>
+      <InvokeMethod DisplayName="ANALISTADOC" sap:VirtualizedContainerService.HintSize="238,134" sap2010:WorkflowViewState.IdRef="InvokeMethod_6" MethodName="SetOrdinal">
+        <InvokeMethod.TargetObject>
+          <InArgument x:TypeArguments="sd:DataColumn">[dtBaseDados.Columns("ANALISTADOC")]</InArgument>
+        </InvokeMethod.TargetObject>
+        <InArgument x:TypeArguments="x:Int32">5</InArgument>
+      </InvokeMethod>
+      <InvokeMethod DisplayName="NÚMEROPROCESSOADM" sap:VirtualizedContainerService.HintSize="238,134" sap2010:WorkflowViewState.IdRef="InvokeMethod_7" MethodName="SetOrdinal">
+        <InvokeMethod.TargetObject>
+          <InArgument x:TypeArguments="sd:DataColumn">[dtBaseDados.Columns("NÚMEROPROCESSOADM")]</InArgument>
+        </InvokeMethod.TargetObject>
+        <InArgument x:TypeArguments="x:Int32">6</InArgument>
+      </InvokeMethod>
+      <InvokeMethod DisplayName="DATADEABERTURA" sap:VirtualizedContainerService.HintSize="238,134" sap2010:WorkflowViewState.IdRef="InvokeMethod_8" MethodName="SetOrdinal">
+        <InvokeMethod.TargetObject>
+          <InArgument x:TypeArguments="sd:DataColumn">[dtBaseDados.Columns("DATADEABERTURA")]</InArgument>
+        </InvokeMethod.TargetObject>
+        <InArgument x:TypeArguments="x:Int32">7</InArgument>
+      </InvokeMethod>
+      <InvokeMethod DisplayName="HORADEABERTURA" sap:VirtualizedContainerService.HintSize="238,134" sap2010:WorkflowViewState.IdRef="InvokeMethod_9" MethodName="SetOrdinal">
+        <InvokeMethod.TargetObject>
+          <InArgument x:TypeArguments="sd:DataColumn">[dtBaseDados.Columns("HORADEABERTURA")]</InArgument>
+        </InvokeMethod.TargetObject>
+        <InArgument x:TypeArguments="x:Int32">8</InArgument>
+      </InvokeMethod>
+      <InvokeMethod DisplayName="MODALIDADEEDITAL" sap:VirtualizedContainerService.HintSize="238,134" sap2010:WorkflowViewState.IdRef="InvokeMethod_10" MethodName="SetOrdinal">
+        <InvokeMethod.TargetObject>
+          <InArgument x:TypeArguments="sd:DataColumn">[dtBaseDados.Columns("MODALIDADEEDITAL")]</InArgument>
+        </InvokeMethod.TargetObject>
+        <InArgument x:TypeArguments="x:Int32">9</InArgument>
+      </InvokeMethod>
+      <InvokeMethod DisplayName="RAMO" sap:VirtualizedContainerService.HintSize="238,134" sap2010:WorkflowViewState.IdRef="InvokeMethod_11" MethodName="SetOrdinal">
+        <InvokeMethod.TargetObject>
+          <InArgument x:TypeArguments="sd:DataColumn">[dtBaseDados.Columns("RAMO")]</InArgument>
+        </InvokeMethod.TargetObject>
+        <InArgument x:TypeArguments="x:Int32">10</InArgument>
+      </InvokeMethod>
+      <InvokeMethod DisplayName="NOMEANALISTA" sap:VirtualizedContainerService.HintSize="238,134" sap2010:WorkflowViewState.IdRef="InvokeMethod_12" MethodName="SetOrdinal">
+        <InvokeMethod.TargetObject>
+          <InArgument x:TypeArguments="sd:DataColumn">[dtBaseDados.Columns("NOMEANALISTA")]</InArgument>
+        </InvokeMethod.TargetObject>
+        <InArgument x:TypeArguments="x:Int32">11</InArgument>
+      </InvokeMethod>
+      <InvokeMethod DisplayName="NUMEROEDITAL" sap:VirtualizedContainerService.HintSize="238,134" sap2010:WorkflowViewState.IdRef="InvokeMethod_13" MethodName="SetOrdinal">
+        <InvokeMethod.TargetObject>
+          <InArgument x:TypeArguments="sd:DataColumn">[dtBaseDados.Columns("NUMEROEDITAL")]</InArgument>
+        </InvokeMethod.TargetObject>
+        <InArgument x:TypeArguments="x:Int32">12</InArgument>
+      </InvokeMethod>
+      <InvokeMethod DisplayName="TELEFONE" sap:VirtualizedContainerService.HintSize="238,134" sap2010:WorkflowViewState.IdRef="InvokeMethod_14" MethodName="SetOrdinal">
+        <InvokeMethod.TargetObject>
+          <InArgument x:TypeArguments="sd:DataColumn">[dtBaseDados.Columns("TELEFONE")]</InArgument>
+        </InvokeMethod.TargetObject>
+        <InArgument x:TypeArguments="x:Int32">13</InArgument>
+      </InvokeMethod>
+      <InvokeMethod DisplayName="CREDENCIAMENTONOMES" sap:VirtualizedContainerService.HintSize="238,134" sap2010:WorkflowViewState.IdRef="InvokeMethod_15" MethodName="SetOrdinal">
+        <InvokeMethod.TargetObject>
+          <InArgument x:TypeArguments="sd:DataColumn">[dtBaseDados.Columns("CREDENCIAMENTONOMES")]</InArgument>
+        </InvokeMethod.TargetObject>
+        <InArgument x:TypeArguments="x:Int32">14</InArgument>
+      </InvokeMethod>
+      <InvokeMethod DisplayName="CPF" sap:VirtualizedContainerService.HintSize="238,134" sap2010:WorkflowViewState.IdRef="InvokeMethod_16" MethodName="SetOrdinal">
+        <InvokeMethod.TargetObject>
+          <InArgument x:TypeArguments="sd:DataColumn">[dtBaseDados.Columns("CPF")]</InArgument>
+        </InvokeMethod.TargetObject>
+        <InArgument x:TypeArguments="x:Int32">15</InArgument>
+      </InvokeMethod>
+      <InvokeMethod DisplayName="RG" sap:VirtualizedContainerService.HintSize="238,134" sap2010:WorkflowViewState.IdRef="InvokeMethod_17" MethodName="SetOrdinal">
+        <InvokeMethod.TargetObject>
+          <InArgument x:TypeArguments="sd:DataColumn">[dtBaseDados.Columns("RG")]</InArgument>
+        </InvokeMethod.TargetObject>
+        <InArgument x:TypeArguments="x:Int32">16</InArgument>
+      </InvokeMethod>
+      <InvokeMethod DisplayName="STATUS" sap:VirtualizedContainerService.HintSize="238,134" sap2010:WorkflowViewState.IdRef="InvokeMethod_18" MethodName="SetOrdinal">
+        <InvokeMethod.TargetObject>
+          <InArgument x:TypeArguments="sd:DataColumn">[dtBaseDados.Columns("STATUS")]</InArgument>
+        </InvokeMethod.TargetObject>
+        <InArgument x:TypeArguments="x:Int32">17</InArgument>
+      </InvokeMethod>
+    </Sequence>
+    <ui:WriteRange AddHeaders="True" DataTable="[dtBaseDados]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Teste" WorkbookPath="[in_FilePath]">
+      <ui:WriteRange.StartingCell>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+      </ui:WriteRange.StartingCell>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:WriteRange>
+  </Sequence>
+</Activity>

@@ -1,0 +1,42 @@
+
+#Etapa01 - Manipulação do excel
+1. Buscar relatório no diretório \\img01\Producao\Licitar\Relatorio\(Data atual);
+2. Efetuar a formatação do relatório com base nos critérios abaixo:
+	- Aguardando o critérios do excel a ser enviado pela key user (Anaiz).
+3. Incluir a coluna status (Não Processado / Processado);
+
+#Etapa02 - Acessando o portal
+4. Acessar a página PortoNet (URL?) > Sistemas > Ver todos;
+5. Inserir o texto Licitaçoes;
+6. Clicar na opção Pesquisar;
+7. Clicar na opção Sistema de Licitações;
+8. Aguardar a página Licitar carregar;
+9. Através do Menu, selecionar a opção Gestão > Acompanhar Processo;
+
+#Etapa03 - Pesquisando o Número do processo no portal Licitações 
+10. Colar o Número do Processo (É extraído do excel) no campo de texto Número do Processo;
+11. Clicar em Pesquisar;
+12. Clicar no btn Detalhar Informações do Processo;
+13. Aguardar o pop-up Detalhe Processo;
+14. Após aberto, clicar na opção Detalhe do Processo;
+
+#Etapa04 - Obtendo as informações 
+15. Obter as informações(abaixo) da guia PRINCIPAL:
+	- Ramo, Número de edital, Data Abertura, Nome do Orgão Público e o Tipo de modalidade.
+16. Clicar na opção CORRETOR;
+17. Varrer os corretores e extrair as informações dos campos abaixo:
+	- Credenciamento-Nomes, CPF e RG.
+
+#Etapa05 - Criando as declarações
+18. Obter os templates no diretório local;
+19. Manipular os templates:
+	- Inserir as informações extraídas do portal para cada template.
+	- Salvar o arquivo em *.pdf no diretório de rede seguindo um padrão a ser definido pela key user.
+20. Ir para o próximo caso da lista... 
+
+#Regras de negócio
+1. Reprocessamento - Elaborar lógica para em caso de reprocessamento partir do arquivo excel tratado.
+2. Considerar todos os templates de Declaração contidos no diretório local.
+3. Considerar sempre 11 digitos para o CPF (Incremento de zeros, se necessário).
+
+	 

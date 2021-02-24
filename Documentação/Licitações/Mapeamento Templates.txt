@@ -1,0 +1,98 @@
+#TEMPLATES
+
+
+DADOS CADASTRAIS _ ASSINATURA DE CONTRATO.docx **
+
+	- (Nome do órgão do órgão) = RAZAOSOCIALORGAO
+	- Modalidade do Pregão = MODALIDADEEDITAL
+	- Nº = NUMEROEDITAL
+	- DATA ATUAL
+
+DECLARAÇÃO DE CUMPRIMENTO DE REQUISITOS.docx **
+
+	- (Nome do órgão do órgão)
+	- Modalidade do Pregão
+	- Nº
+	- DATA ATUAL
+
+
+DECLARAÇÃO DE ELABORAÇÃO INDEPENDENTE DE PROPOSTA.docx **
+
+	- (Nome do órgão do órgão)
+	- Modalidade do Pregão
+	- Nº
+	- DATA ATUAL
+
+
+DECLARAÇÃO DE FATOS SUPERVENIENTES.docx **
+
+	- (Nome do órgão do órgão)
+	- Modalidade do Pregão
+	- Nº 
+	- DATA ATUAL
+
+
+DECLARAÇÃO DE IDONEIDADE.docx **
+	
+	- (Nome do órgão do órgão)
+	- Modalidade do Pregão
+	- Nº
+	- DATA ATUAL
+
+
+DECLARAÇÃO DE NÃO VISTORIA.docx **
+
+	- (Nome do órgão do órgão)
+	- Modalidade do Pregão
+	- Nº
+	- DATA ATUAL
+
+
+DECLARAÇÃO DE PARENTESCO.docx **
+
+	- (Nome do órgão do órgão)
+	- Modalidade do Pregão
+	- Nº
+	- DATA ATUAL
+
+
+DECLARAÇÃO DE SITUAÇÃO REGULAR PERANTE O MINISTÉRIO DO TRABALHO.docx **
+
+	- (Nome do órgão do órgão)
+	- Modalidade do Pregão
+	- Nº
+	- DATA ATUAL
+
+
+_ENVELOPE PORTO CIA.docx
+
+	- Nome de orgão 1
+	- N° 1 (PREGÃO)
+	- Nº 2 (EDITAL)
+	- N° 3 (PROCESSO)
+
+
+DECLARAÇÃO DO ALVARÁ.docx
+
+	- (Nome do órgão do órgão)
+	- Modalidade do Pregão
+	- Nº
+	- DATA ATUAL
+
+
+_CREDENCIAMENTO _PROCURAÇÃO.docx
+
+	- (Nome do órgão do órgão) 
+	- Modalidade do Pregão
+	- Nº
+	- NOME
+	- RG
+	- CPF
+	- Nacionalidade**
+	- estado civil**
+	- Profissão**
+	- endereço**
+	- DATA ATUAL
+
+
+
